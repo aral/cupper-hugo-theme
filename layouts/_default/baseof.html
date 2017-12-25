@@ -68,6 +68,11 @@
                 </p>
               {{ end }}
             </div>
+
+            {{if not .Site.Params.disableSearch}}
+              {{ partial "search.html" . }}
+            {{end}}
+
             {{ block "nav" . }}
               <nav id="patterns-nav" class="patterns" role="navigation">
                 <h2 class="vh">Main navigation</h2>
