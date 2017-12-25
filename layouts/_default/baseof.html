@@ -24,6 +24,7 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet" media="none" onload="this.media='all';">
     <link rel="stylesheet" href="{{ "css/prism.css" | absURL }}" media="none" onload="this.media='all';">
     <link rel="stylesheet" type="text/css" href="{{ "css/styles.css" | absURL }}">
+    <script src="{{"js/jquery-2.x.min.js"| relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}"></script>
     <style id="inverter" media="none">
       html { filter: invert(100%) }
       * { background-color: inherit }
