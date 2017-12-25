@@ -1,5 +1,9 @@
 {{ $headings := findRE "<h2.*?>(.|\n])+?</h2>" .Content }}
 {{ if ge (len $headings) 2 }}
+
+  {{if not .Site.Params.disableSearch}}
+    {{ partial "search.html" . }}
+  {{end}}
   <nav class="toc" aria-labelledby="toc-heading">
     <h2 id="toc-heading">Table of contents</h2>
     <ol>
